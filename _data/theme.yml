@@ -17,7 +17,7 @@ t:
   older: "Older"
   email: "Email"
   subscribe: "Subscribe"
-  read_more: "Read More"
+  read_more: "--"
   posts: "Posts"
   page: "Page"
   of: "of"
@@ -36,3 +36,4 @@ google_fonts:
 navigation_pages:
   - about.md
   - cv.md
+  - tag.md

@@ -6,9 +6,9 @@
 
 <article class="entry">
   <header class="entry-header">
-    <h4 class="entry-title">
-      <a href="{{ post.url | relative_url }}" rel="bookmark"></a>{{ title }}</a>
-    </h4>
+    <h3 class="entry-title">
+      <a href="{{ post.url | relative_url }}" rel="bookmark">{{ title }}</a>
+    </h3>
     {% if post.image.thumbnail %}
       {% assign entry_image = post.image.thumbnail %}
       {% unless entry_image contains '://' %}
@@ -29,9 +29,8 @@
     </ul>
   </footer>
      <div class="entry-excerpt">
-    <!--sudah diganti-->
     {% if post.excerpt %}
-      {{ post.content | markdownify }}
+      {{ post.excerpt | markdownify }}
       <!--<p><a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>-->
     {% endif %}
   </div>

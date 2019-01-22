@@ -23,8 +23,9 @@ author:
   name: woww
   twitter: woww
   picture: woww
-twitter_username: woww
-github_username: docupajak
+telegram_username: diskusipajak
+twitter_username: #woww
+github_username: #docupajak
 logo: /assets/images/tiger.png # path of site logo, e.g. "/assets/images/logo.png"
 search: true #, false (default)
 search_full_content: false # true, false (default)

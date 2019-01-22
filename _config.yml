@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: Wow
+title: Wikipajak.org
 email:
 description:
 baseurl: /jekyll-theme-basically-basic # the optional subpath of your site, e.g. "/blog"
@@ -81,5 +81,5 @@ defaults:
       path: "_posts"
       type: posts
     values:
-      layout: post
-      read_time: true
+      layout: single
+      read_time: false

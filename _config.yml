@@ -23,6 +23,7 @@ author:
   name: woww
   twitter: woww
   picture: woww
+facebook_username: diskusipajak
 telegram_username: diskusipajak
 twitter_username: #woww
 github_username: #docupajak
@@ -35,6 +36,10 @@ algolia:
   index_name: # YOUR_INDEX_NAME
   search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
   powered_by: # true (default), false
+
+# ga
+google_analytics: UA-111280620-2
+google_adsense: ca-pub-2676120456797792 
 
 # Build settings
 markdown: kramdown

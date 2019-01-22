@@ -22,7 +22,7 @@ url: https://docupajak.github.io # the base hostname & protocol for your site e.
 author:
   name: woww
   twitter: woww
-  picture: woww
+  picture: /assets/images/logo.png
 facebook_username: diskusipajak
 telegram_username: diskusipajak
 twitter_username: #woww

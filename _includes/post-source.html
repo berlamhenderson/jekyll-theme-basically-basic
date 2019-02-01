@@ -1,0 +1,15 @@
+{% if post.facebook %}
+    <a href="https://facebook.com{{ post.facebook }}" class="source">#Facebook</a>
+{% endif %}
+{% if post.telegram %}
+    <a href="https://t.me{{ post.telegram }}" class="source">#Telegram</a>
+{% endif %}
+{% if post.twitter %}
+    <a href="https://twitter.com{{ post.twitter }}" class="source">#Twitter</a>
+{% endif %}
+
+{%comment %}
+{% if post.facebook %}
+    <a href="https://facebook.com{{ post.facebook }}" class="icon">{% include icon-facebook.svg %} Facebook</a>
+{% endif %}
+{%endcomment%}

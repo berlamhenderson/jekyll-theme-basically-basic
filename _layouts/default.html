@@ -1,22 +1,48 @@
 <!DOCTYPE html>
-<!--
-    Basically Basic Jekyll Theme 1.4.1
-    Copyright 2017-2018 Michael Rose - mademistakes.com | @mmistakes
-    Free for personal and commercial use under the MIT license
-    https://github.com/mmistakes/jekyll-basically-theme/blob/master/LICENSE
--->
+
 <html lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class="no-js">
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {{ page.title | slugify }}">
-      
-    {% for post in site.posts %}
-    
-  {% include entry-waterfall.html %}
-{% endfor %}
+<body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {{ page.title | slugify }}">
 
-    {% include scripts.html %}
 
-  </body>
+  <main>
+    <header class="item header">
+      {% if site.logo contains '://' %}
+      {% assign site_logo = site.logo %}
+      {% else %}
+      {% assign site_logo = site.logo | relative_url %}
+      {% endif %}
+      <div class="stats">
+        <input type="checkbox" id="check">
+        <label class="btn-toggle" for="check">+</label>
+        <nav>
+          <a href="/">{% if site.logo %}<img src="{{ site_logo }}" alt="" class="logo">{% endif %}</a>
+          <a href="#">Tweets<span>509</span></a>
+          <a href="#">Following<span>1839</span></a>
+          <a href="#">Followers<span>235</span></a>
+          <a href="#">Favourites<span>200</span></a>
+          <a href="#">List<span>2</span></a>
+          <button class="btn">Follow</button>
+        </nav>
+      </div>
+    </header>
+
+
+    <aside class="item side-1">
+    </aside>
+
+    <div class="item main">
+      {% for post in site.posts %}
+      {% include entry-waterfall.html %}
+      {% endfor %}
+    </div>
+    <aside class="item side-1">
+    </aside>
+  </main>
+
+  {% include scripts.html %}
+
+</body>
 
 </html>

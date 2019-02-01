@@ -1,93 +1,119 @@
-html {
-  background: #f5f7f8;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  padding: 20px 0;
-}
-
-.band {
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
-  
-  display: grid;
-  
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 20px;
-  
-}
-
-@media only screen and (min-width: 500px) {
-  .band {
-    grid-template-columns: 1fr 1fr;
-  }  
-  .item-1 {
-  grid-column: 1/ span 2;
-  }
-  .item-1 h1 {
-    font-size: 30px;
-  }
-}
-
-@media only screen and (min-width: 850px) {
-  .band {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-/* card */
-
-.card {
-  min-height: 100%;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: #444;
-  position: relative;
-  top: 0;
-  transition: all .1s ease-in;
-}
-
-.card:hover {
-  top: -2px;
-  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
-}
-
-.card article {
-  padding: 20px;
-  display: flex;
-  
-  flex: 1;
-  justify-content: space-between;
-  flex-direction: column;
-  
-}
-.card .thumb {
-  padding-bottom: 60%;
-  background-size: cover;
-  background-position: center center;
-}
-
-.card p { 
-  flex: 1; /* make p grow to fill available space*/
-  line-height: 1.4;
-}
-
-/* typography */
-h1 {
-  font-size: 20px;
+body {
+  background-color: #F5F5F5;
+  color: #333;
+  font-size: 0.9em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
   margin: 0;
+}
+
+section h2 {
+  margin: 50px 0 0! important;
+}
+
+h2 {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
   color: #333;
 }
 
-.card span {
-  font-size: 12px;
-  font-weight: bold;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  margin: 2em 0 0 0;
+.item {
+  padding: 1rem;
+  background: #ffffff;
+  margin: 0 15px 15px;
 }
+.item:nth-child(n+2) {
+  min-height: 15vh;
+}
+
+
+
+.side-1 .pro {
+  width: 200px;
+  height: 200px;
+  border: 4px solid white;
+  border-radius: 10px;
+  transform: translateY(-30%);
+  background: white;
+  box-shadow: 0 0 2px #333;
+}
+
+.side-1 section {
+  transform: translateY(-100px);
+}
+
+.side-1 section h2 {
+  margin: 0;
+}
+
+section p {
+  font-size: 0.9em;
+}
+
+section .btn {
+  width: 100%;
+}
+
+.main,
+.side-2 {
+  margin-top: 15px;
+  border: 1px solid rgba(51, 51, 51, 0.09);
+  padding: 0;
+}
+
+
+
+.main h2,
+.side-2 h2 {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.09);
+}
+
+.main .entry pre {
+  overflow-x: auto;
+}
+
+.btn {
+	display: block;
+  border: 0;
+  background: #299;
+  color: white;
+  font-weight: 900;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+/****toogle control****/
+
+#check {
+  position: absolute;
+  opacity: 0;
+}
+
+
+.btn-toggle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  background: #299;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-toggle:active {
+  opacity: 0.7;
+}
+
+#check:checked ~nav a:nth-child(n+2) {
+  display: block;
+}
+

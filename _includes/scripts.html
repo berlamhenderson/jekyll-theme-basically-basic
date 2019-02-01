@@ -1,12 +1,6 @@
 {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
 {% endif %}
-<script src="{{ '/assets/javascripts/waterfall-1.0.2.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/javascripts/prism.min.js' | relative_url }}"></script>
-    <script>
-        var grid = document.querySelector('.waterfall');
-        waterfall(grid);
-    </script>
 
 {% if site.search %}
   {%- assign search_provider = site.search_provider | default: "lunr" -%}

@@ -3,8 +3,8 @@
    ========================================================================== */
 .post {
   border-bottom: 1px solid #eee;
-  margin: 0 2rem;
-  padding: 2rem 1rem;
+  margin: 0;
+  padding: 2rem 20px;
 }
 
 .post:hover {
@@ -14,7 +14,7 @@
 
 .post .title {
   font-weight: 600;
-  margin-top: 1.1rem;
+  margin: 1.1rem 0;
 }
 
 .post .title,
@@ -32,10 +32,6 @@
 
 .post .entry {
   line-height: 1rem;
-}
-
-.menu li:nth-child(5):hover~.bg {
-  background: #ec6dff;
 }
 
 .meta {

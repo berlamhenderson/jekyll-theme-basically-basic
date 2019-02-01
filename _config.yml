@@ -71,7 +71,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - node_modules
+  #- node_modules
   - Rakefile
   - README
   - vendor/bundle/
@@ -90,3 +90,9 @@ defaults:
     values:
       layout: single
       read_time: false
+
+# Sass
+sass:
+    load_paths:
+        - _sass
+        - node_modules

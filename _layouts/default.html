@@ -7,26 +7,7 @@
 
 
   <main>
-    <header class="item header">
-      {% if site.logo contains '://' %}
-      {% assign site_logo = site.logo %}
-      {% else %}
-      {% assign site_logo = site.logo | relative_url %}
-      {% endif %}
-      <div class="stats">
-        <input type="checkbox" id="check">
-        <label class="btn-toggle" for="check">+</label>
-        <nav>
-          <a href="/">{% if site.logo %}<img src="{{ site_logo }}" alt="" class="logo">{% endif %}</a>
-          <a href="#">Tweets<span>509</span></a>
-          <a href="#">Following<span>1839</span></a>
-          <a href="#">Followers<span>235</span></a>
-          <a href="#">Favourites<span>200</span></a>
-          <a href="#">List<span>2</span></a>
-          <button class="btn">Follow</button>
-        </nav>
-      </div>
-    </header>
+    {% include navigation.html %}
 
 
     <aside class="item side-1">
@@ -34,7 +15,7 @@
 
     <div class="item main">
       {% for post in site.posts %}
-      {% include entry-waterfall.html %}
+      {% include entry-post.html %}
       {% endfor %}
     </div>
     <aside class="item side-1">

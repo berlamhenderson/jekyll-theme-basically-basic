@@ -4,7 +4,7 @@
   {% assign title = post.title %}
 {% endif %}
 <div class="post">
-  <div class="meta"> {% include post-source.html %} - {{post.date}}</div>
+  <div class="meta"> {% include post-source.html %} - {{post.date | date: "%b %d, %Y" }}</div>
   <div class="title">{{title}}</div>
-  <div class="entry">{{post.content}}</div>
+  <div class="entry markdown-body">{{post.content}}</div>
 </div>

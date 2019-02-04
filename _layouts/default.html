@@ -14,9 +14,11 @@
     </aside>
 
     <div class="item main">
-      {% for post in site.posts %}
+      {％ for post in paginator.posts ％}	
       {% include entry-post.html %}
       {% endfor %}
+
+      <div class="infinite-spinner"></div>
     </div>
     <aside class="item side-1">
     </aside>

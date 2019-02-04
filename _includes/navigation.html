@@ -9,6 +9,8 @@
     <label class="btn-toggle" for="check">+</label>
     <nav>
       <a href="/" itemprop="url">{% if site.logo %}<img src="{{ site_logo }}" alt="" class="logo">{% endif %}</a>
+      
+      {%comment %}
       <!-- site.pages links -->
       {% assign default_paths = site.pages | map: "path" %}
       {% assign page_paths = site.data.theme.navigation_pages | default: default_paths %}
@@ -23,7 +25,7 @@
       {% endif %}
       {% endfor %}
 
-      {%comment %}
+      
       <a href="#">Tweets<span>509</span></a>
 
       <button class="btn">Follow</button>

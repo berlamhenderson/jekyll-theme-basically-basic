@@ -58,11 +58,11 @@
     display: block;
     margin-bottom: 0;
     padding: 0;
-    border: none;
+    border: 1px solid red;
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background-color: transparent;
+    background-color: #fb77f0; //transparent;
     @include fluid-type($min-vw, $max-vw, 24px, 32px);
   }
 
